@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earthscapes Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="field-band" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<header>
+  <div class="eyebrow">Environment Photo Collection</div>
+  <h1>Earthscapes Gallery</h1>
+  <p>A bright collection of mountains, forests, water, and wildlife from the living world.</p>
+</header>
+
+<section class="controls" aria-label="Gallery controls">
+  <label class="search" for="searchInput">
+    <span>Search</span>
+    <input id="searchInput" type="search" placeholder="Try waterfall, owl, alpine..." autocomplete="off">
+  </label>
+
+  <nav class="categories" id="categories" aria-label="Photo categories">
+    <button data-cat="all" class="active">All</button>
+    <button data-cat="mountains">Mountains</button>
+    <button data-cat="forests">Forests</button>
+    <button data-cat="water">Water</button>
+    <button data-cat="wildlife">Wildlife</button>
+  </nav>
+</section>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <p class="empty-state" id="emptyState">No environment photos match that search.</p>
+</main>
+
+<div class="field-band" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<footer>
+  <span>Earth looks good on you</span>
+  <small>open a view, save a favorite, share the wild</small>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="closeBtn" aria-label="Close lightbox">&times;</button>
+  <button class="lightbox-nav prev" id="prevBtn" aria-label="Previous photo">&#8249;</button>
+  <button class="lightbox-nav next" id="nextBtn" aria-label="Next photo">&#8250;</button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-bar">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-actions">
+        <button id="shareBtn" type="button">↗ Share</button>
+        <a id="downloadBtn" href="#" download target="_blank" rel="noreferrer">⇩ Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
